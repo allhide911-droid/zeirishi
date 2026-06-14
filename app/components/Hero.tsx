@@ -35,7 +35,7 @@ export default function Hero() {
       {/* Hero image */}
       <div className="absolute inset-y-0 right-0 w-[55%] hidden lg:block">
         <Image
-          src="/images/office-hero.jpg"
+          src="/images/office-hero-v2.jpg"
           alt="税理士事務所オフィス"
           fill
           style={{ objectFit: "cover", objectPosition: "center" }}
