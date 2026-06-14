@@ -91,7 +91,7 @@ export default function Footer() {
               Contact
             </h4>
             <address className="not-italic space-y-3 text-xs text-white/40 leading-relaxed">
-              <p>〒100-0001<br />東京都千代田区千代田1-1-1<br />なかまちビル5F</p>
+              <p>〒100-0001<br />東京都千代田区千代田1丁目</p>
               <p>TEL: 03-1234-5678</p>
               <p>info@tanaka-tax.jp</p>
               <p>平日 9:00〜18:00<br />土曜 10:00〜15:00（要予約）</p>

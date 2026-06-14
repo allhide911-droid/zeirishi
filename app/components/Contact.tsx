@@ -21,7 +21,7 @@ const initialForm: FormState = {
 const officeInfo = [
   {
     label: "住所",
-    value: "〒100-0001\n東京都千代田区千代田1-1-1\nなかまちビル5F",
+    value: "〒100-0001\n東京都千代田区千代田1丁目",
     iconPath:
       "M15 10.5a3 3 0 11-6 0 3 3 0 016 0z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z",
   },
@@ -137,6 +137,19 @@ export default function Contact() {
                 初めてのご相談は60分間無料です。
                 お気軽にお越しください。
               </p>
+            </div>
+
+            <div className="mt-4 rounded-lg overflow-hidden border border-gold-500/20">
+              <iframe
+                src="https://www.google.com/maps?q=東京都千代田区千代田1丁目&output=embed"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="事務所地図"
+              />
             </div>
           </div>
 
