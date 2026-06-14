@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section
@@ -29,6 +31,24 @@ export default function Hero() {
             "linear-gradient(to bottom, #c9a84c 0%, rgba(201,168,76,0.2) 60%, transparent 100%)",
         }}
       />
+
+      {/* Hero image */}
+      <div className="absolute inset-y-0 right-0 w-[55%] hidden lg:block">
+        <Image
+          src="/images/office-hero.jpg"
+          alt="税理士事務所オフィス"
+          fill
+          style={{ objectFit: "cover", objectPosition: "center" }}
+          priority
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, #0f1733 0%, #0f1733 5%, rgba(15,23,51,0.85) 30%, rgba(15,23,51,0.3) 60%, transparent 100%)",
+          }}
+        />
+      </div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-32 pt-40 w-full">
         <div className="max-w-3xl">

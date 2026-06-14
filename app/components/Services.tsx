@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const services = [
   {
     title: "確定申告・所得税申告",
@@ -117,7 +119,7 @@ export default function Services() {
   return (
     <section id="services" className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-px w-12 bg-gold-500" />
             <span className="text-gold-600 text-xs font-medium tracking-[0.2em] uppercase">
@@ -132,7 +134,19 @@ export default function Services() {
             幅広い税務・会計サービスで、お客様のビジネスと生活をしっかりとサポートします。
           </p>
         </div>
+      </div>
 
+      {/* Services banner */}
+      <div className="relative w-full h-[220px] mb-10">
+        <Image
+          src="/images/services-banner.jpg"
+          alt="サービスイメージ"
+          fill
+          style={{ objectFit: "cover", objectPosition: "center" }}
+        />
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <div
@@ -176,3 +190,4 @@ export default function Services() {
     </section>
   );
 }
+
