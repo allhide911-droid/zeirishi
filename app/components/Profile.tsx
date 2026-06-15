@@ -37,7 +37,7 @@ export default function Profile() {
             <div className="relative">
               <div className="w-60 h-72 bg-navy-700 rounded-lg overflow-hidden border border-gold-500/20 relative">
                 <Image
-                  src="/images/profile-tanaka.jpg"
+                  src="/images/profile-tanaka-v2.jpg"
                   alt="田中 一郎"
                   fill
                   style={{ objectFit: "cover", objectPosition: "center top" }}
