@@ -71,17 +71,10 @@ export default function Testimonials() {
               <p className="text-gray-600 text-sm leading-relaxed flex-1 mb-8">
                 「{t.comment}」
               </p>
-              <div className="flex items-center gap-3 pt-5 border-t border-gray-100">
-                <div className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center flex-shrink-0">
-                  <span className="text-gold-400 text-sm font-bold">
-                    {t.name.charAt(0)}
-                  </span>
-                </div>
-                <div>
-                  <div className="text-navy-800 font-bold text-sm">{t.name}</div>
-                  <div className="text-gray-400 text-xs mt-0.5">{t.role}</div>
-                  <div className="text-gray-400 text-xs mt-0.5">{t.detail}</div>
-                </div>
+              <div className="pt-5 border-t border-gray-100">
+                <div className="text-navy-800 font-bold text-sm">{t.name}</div>
+                <div className="text-gray-400 text-xs mt-0.5">{t.role}</div>
+                <div className="text-gray-400 text-xs mt-0.5">{t.detail}</div>
               </div>
             </div>
           ))}
