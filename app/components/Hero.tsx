@@ -6,6 +6,24 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen bg-navy-900 flex items-center overflow-hidden"
     >
+      {/* Hero image — full width, behind all layers */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/office-hero-v2.jpg"
+          alt="税理士事務所オフィス"
+          fill
+          style={{ objectFit: "cover", objectPosition: "center" }}
+          priority
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(15,23,51,0.75) 0%, rgba(15,23,51,0.35) 100%)",
+          }}
+        />
+      </div>
+
       {/* Diagonal grid pattern */}
       <div
         className="absolute inset-0 opacity-[0.04]"
@@ -32,24 +50,6 @@ export default function Hero() {
         }}
       />
 
-      {/* Hero image */}
-      <div className="absolute inset-y-0 right-0 w-[55%] hidden lg:block">
-        <Image
-          src="/images/office-hero-v2.jpg"
-          alt="税理士事務所オフィス"
-          fill
-          style={{ objectFit: "cover", objectPosition: "center" }}
-          priority
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to right, #0f1733 0%, #0f1733 5%, rgba(15,23,51,0.85) 30%, rgba(15,23,51,0.3) 60%, transparent 100%)",
-          }}
-        />
-      </div>
-
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-32 pt-40 w-full">
         <div className="max-w-3xl">
           <div className="flex items-center gap-3 mb-8">
@@ -60,15 +60,15 @@ export default function Hero() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            信頼と実績で
+            経営とお金の悩みを、
             <br />
-            <span className="text-gold-400">あなたの財務</span>を守る
+            <span className="text-gold-400">安心して相談できる<br />税理士へ</span>
           </h1>
 
           <p className="text-white/60 text-base sm:text-lg leading-relaxed mb-10 max-w-xl">
-            個人・法人を問わず、確定申告から相続税、経営コンサルティングまで。
+            個人・法人を問わず、はじめての方もお気軽にどうぞ。
             <br className="hidden sm:block" />
-            お客様一人ひとりに寄り添った、丁寧な税務サービスをご提供します。
+            専門用語を使わず、わかりやすく丁寧にご対応します。
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -76,7 +76,7 @@ export default function Hero() {
               href="#contact"
               className="inline-flex items-center justify-center bg-gold-500 hover:bg-gold-400 text-white font-semibold px-8 py-4 rounded transition-all duration-200 text-sm"
             >
-              無料相談を予約する
+              まずは無料相談する
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
@@ -98,11 +98,20 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="flex flex-wrap gap-10 mt-16 pt-10 border-t border-white/10">
+          <div className="mt-4">
+            <a
+              href="#faq"
+              className="text-gold-400 hover:text-gold-300 text-sm transition-colors"
+            >
+              オンライン相談も可能です →
+            </a>
+          </div>
+
+          <div className="flex flex-wrap gap-10 mt-12 pt-10 border-t border-white/10">
             {[
               { value: "15年+", label: "業界経験" },
-              { value: "500社+", label: "顧問先実績" },
-              { value: "98%", label: "顧客満足度" },
+              { value: "500社+", label: "顧問先数" },
+              { value: "98%", label: "顧問継続率" },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="text-3xl font-bold text-gold-400">

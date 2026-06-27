@@ -103,29 +103,11 @@ export default function Contact() {
               事務所情報
             </h3>
             {officeInfo.map((item) => (
-              <div key={item.label} className="flex gap-4">
-                <div className="w-10 h-10 bg-navy-800 rounded flex items-center justify-center flex-shrink-0">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-5 h-5 text-gold-400"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d={item.iconPath}
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-xs text-gray-400 mb-1">{item.label}</p>
-                  <p className="text-sm text-gray-700 whitespace-pre-line">
-                    {item.value}
-                  </p>
-                </div>
+              <div key={item.label}>
+                <p className="text-xs text-gray-400 mb-1">{item.label}</p>
+                <p className="text-sm text-gray-700 whitespace-pre-line">
+                  {item.value}
+                </p>
               </div>
             ))}
 
@@ -134,8 +116,7 @@ export default function Contact() {
                 初回無料相談
               </p>
               <p className="text-white text-sm leading-relaxed">
-                初めてのご相談は60分間無料です。
-                お気軽にお越しください。
+                初回60分無料です。まずはお気軽にご相談ください。
               </p>
             </div>
 
@@ -194,6 +175,18 @@ export default function Contact() {
                 onSubmit={handleSubmit}
                 className="bg-white rounded-lg border border-gray-100 shadow-sm p-8 space-y-5"
               >
+                <div className="bg-gray-50 rounded p-4 space-y-1.5">
+                  {[
+                    "通常1営業日以内にご返信いたします",
+                    "無理な営業は一切行いません",
+                    "ご相談内容は秘密厳守いたします",
+                  ].map((text) => (
+                    <p key={text} className="text-xs text-gray-500 flex items-center gap-2">
+                      <span className="text-gold-500">✓</span>{text}
+                    </p>
+                  ))}
+                </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-xs font-medium text-gray-600 mb-1.5">

@@ -31,20 +31,18 @@ export default function Profile() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
           {/* Photo column */}
-          <div className="lg:col-span-2 flex justify-center lg:justify-start">
+          <div className="lg:col-span-2 flex justify-center">
             <div className="relative">
-              <div className="w-60 h-72 bg-navy-700 rounded-lg overflow-hidden border border-gold-500/20 relative">
+              <div className="w-[420px] h-[560px] bg-navy-700 rounded-lg overflow-hidden border border-gold-500/20 relative">
                 <Image
                   src="/images/profile-tanaka-v2.jpg"
                   alt="田中 一郎"
                   fill
-                  style={{ objectFit: "cover", objectPosition: "center top" }}
+                  style={{ objectFit: "cover", objectPosition: "center 20%" }}
                 />
               </div>
-              {/* Offset border accent */}
-              <div className="absolute -bottom-3 -right-3 w-60 h-72 border border-gold-500/15 rounded-lg pointer-events-none" />
             </div>
           </div>
 
@@ -100,6 +98,16 @@ export default function Profile() {
                   </div>
                 ))}
               </div>
+            </div>
+
+            <div className="mb-10">
+              <h4 className="text-gold-400 text-xs tracking-widest mb-3">
+                相談時に大切にしていること
+              </h4>
+              <p className="text-white/55 text-sm leading-relaxed">
+                専門用語をできるだけ使わず、まずは話しやすい雰囲気を大切にしています。
+                小さなお悩みでも、お気軽にご相談ください。
+              </p>
             </div>
 
             <div className="grid grid-cols-3 gap-4 pt-8 border-t border-white/10">

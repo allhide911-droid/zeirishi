@@ -2,17 +2,17 @@ import Image from "next/image";
 
 export default function CTASection() {
   return (
-    <section className="relative py-28 overflow-hidden">
+    <section className="relative py-40 overflow-hidden">
       <Image
         src="/images/services-banner.jpg"
         alt=""
         fill
-        style={{ objectFit: "cover", objectPosition: "center" }}
+        style={{ objectFit: "cover", objectPosition: "center 20%" }}
         aria-hidden="true"
       />
       <div
         className="absolute inset-0"
-        style={{ background: "rgba(15, 23, 51, 0.80)" }}
+        style={{ background: "rgba(15, 23, 51, 0.65)" }}
       />
 
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
@@ -28,6 +28,7 @@ export default function CTASection() {
           <br />
           <span className="text-gold-400">ご相談ください</span>
         </h2>
+        <p className="text-gold-400 text-sm mb-6">小さなお悩みでも大丈夫です</p>
         <p className="text-white/60 text-sm leading-relaxed mb-10 max-w-xl mx-auto">
           初回相談は60分間無料です。税務・会計に関するお悩みを、
           経験豊富な税理士が丁寧にお聞きします。
@@ -36,7 +37,7 @@ export default function CTASection() {
           href="#contact"
           className="inline-flex items-center justify-center bg-gold-500 hover:bg-gold-400 text-white font-semibold px-10 py-4 rounded transition-all duration-200 text-sm"
         >
-          無料相談を予約する
+          まずはお気軽にご相談ください
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
@@ -50,6 +51,9 @@ export default function CTASection() {
             />
           </svg>
         </a>
+        <p className="mt-5 text-white/50 text-xs">
+          オンライン相談対応 ／ 初回60分無料 ／ 無理な営業一切なし
+        </p>
       </div>
     </section>
   );
