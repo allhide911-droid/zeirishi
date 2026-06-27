@@ -7,6 +7,8 @@ const navLinks = [
   { href: "#home", label: "ホーム" },
   { href: "#services", label: "サービス" },
   { href: "#profile", label: "代表プロフィール" },
+  { href: "#testimonials", label: "お客様の声" },
+  { href: "#faq", label: "よくある質問" },
   { href: "#contact", label: "お問い合わせ" },
 ];
 
